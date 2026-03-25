@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body { 
+            background: #1e1e2f; 
+            display: flex; 
+            justify-content: center; 
+            padding: 40px;
+            margin: 0;
+        }
+        .mermaid { 
+            background: #1e1e2f;
+        }
+    </style>
+</head>
+<body>
+    <pre class="mermaid">
+graph TD
+    classDef stage fill:#1e1e2f,stroke:#646cff,stroke-width:2px,color:#fff,font-weight:bold
+    classDef action fill:#2a2a35,stroke:#4caf50,stroke-width:1px,color:#ddd
+    classDef goal fill:#2d2114,stroke:#ff9800,stroke-width:1px,color:#fff
+
+    subgraph CUA ["🚀 CUA 视觉智能体：找 Bug 能力四阶进化路径"]
+        direction TB
+
+        S1["🛡️ 阶段一：启发式规则注入"]:::stage
+        A1["📋 植入 UI/UX 检查清单"]:::action
+        A2["🔍 强制全屏扫描"]:::action
+        G1(("🎯 基础视觉常识")):::goal
+
+        S2["🔨 阶段二：破坏性操作"]:::stage
+        B1["⌨️ 混沌输入"]:::action
+        B2["📏 极限缩放"]:::action
+        B3["🖱️ 无序狂点"]:::action
+        G2(("🎯 捕获布局溢出")):::goal
+
+        S3["⚔️ 阶段三：AI 变异对抗"]:::stage
+        C1["🔴 Vibe 埋 Bug"]:::action
+        C2["🔵 CUA 找 Bug"]:::action
+        C3["🔄 漏网转记忆池"]:::action
+        G3(("🎯 训练 Bug 嗅觉")):::goal
+
+        S4["🤖 阶段四：多智能体并发"]:::stage
+        D1["🏃 竞速跑者"]:::action
+        D2["🥴 笨拙用户"]:::action
+        D3["🕵️ 边缘猎手"]:::action
+        G4(("🎯 自动化 QA 集群")):::goal
+
+        S1 --> A1 & A2 --> G1
+        G1 ==>|"🧠 获得基础感知力"| S2
+        S2 --> B1 & B2 & B3 --> G2
+        G2 ==>|"🛠️ 掌握破坏工具"| S3
+        S3 --> C1 & C2 & C3 --> G3
+        G3 ==>|"📈 建立对抗直觉"| S4
+        S4 --> D1 & D2 & D3 --> G4
+    end
+    </pre>
+    <script>mermaid.initialize({startOnLoad:true, theme:'dark'});</script>
+</body>
+</html>
